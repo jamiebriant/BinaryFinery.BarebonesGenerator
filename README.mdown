@@ -8,3 +8,6 @@ protected members of all the original public classes of the library you give it.
 
 What is the point? I made it purely because I had a Mono-based library that I wanted to reference on
 windows without VS/R# shitting their pants because the it referenced unknown System.dll versions. YMMV.
+
+Copy the two dll's in built into the reflector directory and add the barebones dll (not spackle) using
+the View/AddIns menu item.
