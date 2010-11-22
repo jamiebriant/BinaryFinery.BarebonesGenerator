@@ -9,5 +9,15 @@ protected members of all the original public classes of the library you give it.
 What is the point? I made it purely because I had a Mono-based library that I wanted to reference on
 windows without VS/R# shitting their pants because the it referenced unknown System.dll versions. YMMV.
 
-Copy the two dll's in built into the reflector directory and add the barebones dll (not spackle) using
+Installation
+============
+
+Copy the two dll's in "built" directory into the reflector directory and add the barebones dll (not spackle) using
 the View/AddIns menu item.
+
+Use
+===
+
+Pick a dll and hit Ctrl-Shift-G. It will generate a bunch of files where you tell it. On one test it 
+generated 978 files. 13 of these had errors related to not importing namespaces it needed, and to
+unsafe code (it doesnt generate unsafe keywords).
