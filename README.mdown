@@ -5,7 +5,10 @@ This is a hack of Jason Bock's [FileGenerator for .NET Reflector](http://filegen
 Its use and operation is identical. The result it produces, not. Bare Bones generates compilable (mostly)
 files that do nothing, except maybe throw an exception, but otherwise implement all the public and
 protected members of all the original public classes of the library you give it. The guts are in the Filter methods in
-the file [TypeFileGenerator.cs](https://github.com/jamiebriant/BinaryFinery.BarebonesGenerator/blob/master/BareBonesGenerator/AddIn/Generators/TypeFileGenerator.cs).
+the file [TypeFileGenerator.cs](https://github.com/jamiebriant/BinaryFinery.BarebonesGenerator/blob/master/BareBonesGenerator/AddIn/Generators/TypeFileGenerator.cs). The
+reason this method is so complicated is because it attempts to generate compilable code that returns a default value,
+and also handles "out" parameters. 
+
 
 What is the point? I made it purely because I had a Mono-based library that I wanted to reference on
 windows without VS/R# shitting their pants because the it referenced unknown System.dll versions. YMMV.
